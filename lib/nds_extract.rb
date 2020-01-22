@@ -13,7 +13,7 @@ def flatten_a_o_a(aoa)
       result << aoa[i][k]
       k += 1
     end
-    i += 1
+  i += 1
   end
   result
 end
@@ -43,7 +43,7 @@ aoh = []
 i = 0
   while i < movies_collection.length do
     aoh << movie_with_director_name(name, movies_collection[i])
-    i += 1
+  i += 1
   end
   aoh
 end
@@ -69,7 +69,7 @@ def gross_per_studio(collection)
     else
       hash[collection[i][:studio]] += collection[i][:worldwide_gross]
     end
-    i += 1 
+  i += 1 
   end
   hash
 end
@@ -89,8 +89,9 @@ def movies_with_directors_set(source)
     dir_name = source[i][:name]
     dir_movies = source[i][:movies]
     result << movies_with_director_key(dir_name, dir_movies)
-  end 
-  result  
+  i += 1 
+  end
+  return result  
 end
 
 # ----------------    End of Your Code Region-------------------
